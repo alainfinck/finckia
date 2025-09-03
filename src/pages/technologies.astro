@@ -2,31 +2,15 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout 
-  title="Technologies - Finckia - Développement SaaS sur mesure avec IA"
-  description="Nous utilisons les technologies les plus modernes et performantes pour créer des solutions SaaS innovantes avec intelligence artificielle."
-  image="/img/logo-finckia2.png"
-  ogType="website"
-  twitterCard="summary_large_image"
->
-  <!-- Hero Section avec fond sombre -->
-  <section class="relative bg-gray-900 overflow-hidden py-32">
-    <!-- Particules animées en arrière-plan -->
-    <div class="absolute inset-0">
-      <div class="absolute top-20 left-10 w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
-      <div class="absolute top-40 right-20 w-1 h-1 bg-primary-300 rounded-full animate-ping"></div>
-      <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
-    </div>
-    
-    <!-- Gradient animé -->
-    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 animate-gradient"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<MainLayout title="Technologies - Finckia - Développement SaaS sur mesure avec IA">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-          Nos <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 animate-gradient-text">Technologies</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Nos Technologies
         </h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fade-in-delay">
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           Nous utilisons les technologies les plus modernes et performantes 
           pour créer des solutions SaaS innovantes avec intelligence artificielle.
         </p>
@@ -34,35 +18,34 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <!-- Technologies Grid avec design sombre -->
-  <section class="py-24 bg-gray-800 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Technologies Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Frontend -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <h3 class="text-2xl font-bold text-white mb-6">Frontend</h3>
+        <div class="bg-gray-50 rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Frontend</h3>
           <div class="space-y-4">
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">React / Next.js</span>
-              <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">React / Next.js</span>
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.23 12.004a2.236 2.236 0 0 0-2.235 2.236 2.236 2.236 0 0 0 2.235 2.236 2.236 2.236 0 0 0 2.235-2.236 2.236 2.236 0 0 0-2.235-2.236zm-2.648 10.756c-1.816 0-3.56-.37-5.12-1.006a.954.954 0 0 1-.624-.884c0-.49.398-.89.888-.89.147 0 .294.037.427.103 1.387.735 2.98 1.136 4.66 1.136 1.68 0 3.273-.4 4.66-1.136a.89.89 0 0 1 .427-.103c.49 0 .888.4.888.89 0 .41-.244.784-.624.884-1.56.636-3.304 1.006-5.12 1.006zm-2.648-16.896c-1.816 0-3.56.37-5.12 1.006a.954.954 0 0 0-.624.884c0 .49.398.89.888.89.147 0 .294-.037.427-.103 1.387-.735 2.98-1.136 4.66-1.136 1.68 0 3.273.4 4.66 1.136a.89.89 0 0 0 .427.103c.49 0 .888-.4.888-.89 0-.41-.244-.784-.624-.884-1.56-.636-3.304-1.006-5.12-1.006z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Vue.js / Nuxt</span>
-              <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
-                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Vue.js / Nuxt</span>
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78zM12 14.08L5.16 2.23h4.43L12 6.41l2.41-4.18h4.43z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Tailwind CSS</span>
-              <div class="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center border border-cyan-500/30">
-                <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Tailwind CSS</span>
+              <div class="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
                 </svg>
               </div>
@@ -71,29 +54,29 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- Backend -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <h3 class="text-2xl font-bold text-white mb-6">Backend</h3>
+        <div class="bg-gray-50 rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Backend</h3>
           <div class="space-y-4">
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Node.js / Express</span>
-              <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
-                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Node.js / Express</span>
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.332,0.924,0.944,0.924,1.604 v10.15c0,0.659-0.354,1.273-0.924,1.604L12.922,23.754C12.642,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.662-1.152-2.753-2.908-2.753c-1.758,0-2.907,1.091-2.907,2.753c0,1.665,1.149,2.754,2.907,2.754 C17.947,16.747,19.099,15.658,19.099,13.993z M16.902,15.357c-0.718,0-1.18-0.569-1.18-1.364c0-0.795,0.462-1.365,1.18-1.365 c0.717,0,1.179,0.57,1.179,1.365C18.081,14.788,17.619,15.357,16.902,15.357z M11.076,15.425c-0.297,0-0.49-0.203-0.49-0.494 c0-0.291,0.193-0.494,0.49-0.494c0.295,0,0.488,0.203,0.488,0.494C11.564,15.222,11.371,15.425,11.076,15.425z M9.614,15.425 c-0.295,0-0.488-0.203-0.488-0.494c0-0.291,0.193-0.494,0.488-0.494c0.297,0,0.49,0.203,0.49,0.494 C10.104,15.222,9.911,15.425,9.614,15.425z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Python / Django</span>
-              <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Python / Django</span>
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.23 12.004a2.236 2.236 0 0 0-2.235 2.236 2.236 2.236 0 0 0 2.235 2.236 2.236 2.236 0 0 0 2.235-2.236 2.236 2.236 0 0 0-2.235-2.236zm-2.648 10.756c-1.816 0-3.56-.37-5.12-1.006a.954.954 0 0 1-.624-.884c0-.49.398-.89.888-.89.147 0 .294.037.427.103 1.387.735 2.98 1.136 4.66 1.136 1.68 0 3.273-.4 4.66-1.136a.89.89 0 0 1 .427-.103c.49 0 .888.4.888.89 0 .41-.244.784-.624.884-1.56.636-3.304 1.006-5.12 1.006zm-2.648-16.896c-1.816 0-3.56.37-5.12 1.006a.954.954 0 0 0-.624.884c0 .49.398.89.888.89.147 0 .294-.037.427-.103 1.387-.735 2.98-1.136 4.66-1.136 1.68 0 3.273.4 4.66 1.136a.89.89 0 0 0 .427.103c.49 0 .888-.4.888-.89 0-.41-.244-.784-.624-.884-1.56-.636-3.304-1.006-5.12-1.006z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">PostgreSQL</span>
-              <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">PostgreSQL</span>
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M3.976 23.865c-.416 0-.832-.104-1.2-.312L.528 22.583C.208 22.4 0 22.056 0 21.68V2.32c0-.376.208-.72.528-.903L2.776.447c.368-.208.784-.312 1.2-.312.416 0 .832.104 1.2.312l2.248 1.272c.32.183.528.527.528.903v19.36c0 .376-.208.72-.528.903l-2.248 1.272c-.368.208-.784.312-1.2.312zM1.6 21.68l2.248-1.272V2.592L1.6 1.32v20.36z"/>
                   <path d="M12.976 23.865c-.416 0-.832-.104-1.2-.312L9.528 22.583c-.32-.183-.528-.527-.528-.903V2.32c0-.376.208-.72.528-.903L11.776.447c.368-.208.784-.312 1.2-.312.416 0 .832.104 1.2.312l2.248 1.272c.32.183.528.527.528.903v19.36c0 .376-.208.72-.528.903l-2.248 1.272c-.368.208-.784.312-1.2.312zM10.6 21.68l2.248-1.272V2.592L10.6 1.32v20.36z"/>
                 </svg>
@@ -103,29 +86,29 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- AI & ML -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <h3 class="text-2xl font-bold text-white mb-6">IA & Machine Learning</h3>
+        <div class="bg-gray-50 rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">IA & Machine Learning</h3>
           <div class="space-y-4">
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">TensorFlow</span>
-              <div class="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center border border-orange-500/30">
-                <svg class="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">TensorFlow</span>
+              <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">PyTorch</span>
-              <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center border border-red-500/30">
-                <svg class="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">PyTorch</span>
+              <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">OpenAI API</span>
-              <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center border border-purple-500/30">
-                <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">OpenAI API</span>
+              <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
@@ -134,29 +117,29 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- Cloud -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <h3 class="text-2xl font-bold text-white mb-6">Cloud & DevOps</h3>
+        <div class="bg-gray-50 rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Cloud & DevOps</h3>
           <div class="space-y-4">
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">AWS</span>
-              <div class="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center border border-orange-500/30">
-                <svg class="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">AWS</span>
+              <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6.763 10.036h1.26c.08 0 .145.065.145.145v3.3c0 .08-.065.145-.145.145h-1.26c-.08 0-.145-.065-.145-.145v-3.3c0-.08.065-.145.145-.145zM12.017 10.036h1.26c.08 0 .145.065.145.145v3.3c0 .08-.065.145-.145.145h-1.26c-.08 0-.145-.065-.145-.145v-3.3c0-.08.065-.145.145-.145zM17.271 10.036h1.26c.08 0 .145.065.145.145v3.3c0 .08-.065.145-.145.145h-1.26c-.08 0-.145-.065-.145-.145v-3.3c0-.08.065-.145.145-.145z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Docker</span>
-              <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Docker</span>
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.186.186 0 00-.185.185v1.888c0 .102.083.185.185.185zm-2.954-5.43h2.118a.186.186 0 00.186-.185V3.574a.186.186 0 00-.186-.185h-2.118a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185zm0 2.716h2.118a.186.186 0 00.186-.185V6.29a.186.186 0 00-.186-.185h-2.118a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185zm-2.93 0h2.12a.186.186 0 00.185-.185V6.29a.186.186 0 00-.185-.185h-2.12a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185zm0 2.715h2.12a.186.186 0 00.185-.185V9.006a.186.186 0 00-.185-.186h-2.12a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.186zm2.93 0h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.186zm-2.93 2.715h2.12a.186.186 0 00.185-.185v-1.888a.186.186 0 00-.185-.185h-2.12a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185zm2.93 0h2.118a.186.186 0 00.186-.185v-1.888a.186.186 0 00-.186-.185h-2.118a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185zm2.93 0h2.118a.186.186 0 00.186-.185v-1.888a.186.186 0 00-.186-.185h-2.118a.186.186 0 00-.185.185v1.888c0 .102.082.185.185.185z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">Kubernetes</span>
-              <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">Kubernetes</span>
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M10.204 14.54c0-.337.274-.61.61-.61h2.558c.337 0 .61.273.61.61v2.558c0 .337-.273.61-.61.61h-2.558c-.336 0-.61-.273-.61-.61v-2.558zm-3.67-3.67c0-.337.273-.61.61-.61h2.558c.337 0 .61.273.61.61v2.558c0 .337-.273.61-.61.61H7.144c-.337 0-.61-.273-.61-.61v-2.558zm7.34 0c0-.337.273-.61.61-.61h2.558c.337 0 .61.273.61.61v2.558c0 .337-.273.61-.61.61h-2.558c-.337 0-.61-.273-.61-.61v-2.558z"/>
                 </svg>
               </div>
@@ -165,29 +148,29 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <!-- Security -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <h3 class="text-2xl font-bold text-white mb-6">Sécurité</h3>
+        <div class="bg-gray-50 rounded-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Sécurité</h3>
           <div class="space-y-4">
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">OAuth 2.0</span>
-              <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
-                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">OAuth 2.0</span>
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">JWT</span>
-              <div class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center border border-purple-500/30">
-                <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">JWT</span>
+              <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
             </div>
-            <div class="flex items-center justify-between p-4 bg-gray-800/80 rounded-xl border border-gray-600/30">
-              <span class="font-medium text-gray-300">HTTPS / SSL</span>
-              <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center border border-green-500/30">
-                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+              <span class="font-medium text-gray-700">HTTPS / SSL</span>
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
                 </svg>
               </div>
@@ -198,21 +181,19 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <!-- CTA Section avec design sombre -->
-  <section class="py-24 bg-gradient-to-r from-primary-900 to-primary-800 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/50 to-primary-800/50"></div>
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        Prêt à utiliser ces <span class="text-primary-300">technologies</span> ?
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Prêt à utiliser ces technologies ?
       </h2>
-      <p class="text-xl text-primary-100 mb-10 max-w-3xl mx-auto">
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
         Contactez-nous pour discuter de votre projet et découvrir comment nous pouvons 
         utiliser ces technologies pour créer votre solution SaaS avec IA.
       </p>
       <a
         href="/contact"
-        class="bg-white text-primary-600 hover:bg-gray-100 px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20"
+        class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
       >
         Démarrer un projet
       </a>
@@ -220,37 +201,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 </MainLayout>
 
-<style>
-  @keyframes gradient {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes gradient-text {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  .animate-gradient {
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 1s ease-out;
-  }
-  
-  .animate-fade-in-delay {
-    animation: fade-in 1s ease-out 0.3s both;
-  }
-  
-  .animate-gradient-text {
-    background-size: 200% 200%;
-    animation: gradient-text 3s ease infinite;
-  }
-</style>
+
+
+
+

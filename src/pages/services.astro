@@ -2,113 +2,183 @@
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Services - Finckia - Développement SaaS en Django avec IA">
-  <!-- Hero Section avec fond sombre -->
-  <section class="relative bg-gray-900 overflow-hidden py-32">
-    <!-- Particules animées en arrière-plan -->
-    <div class="absolute inset-0">
-      <div class="absolute top-20 left-10 w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
-      <div class="absolute top-40 right-20 w-1 h-1 bg-primary-300 rounded-full animate-ping"></div>
-      <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
-    </div>
-    
-    <!-- Gradient animé -->
-    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 animate-gradient"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<MainLayout title="Services - Finckia - Développement SaaS sur mesure avec IA">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-          Mes <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 animate-gradient-text">Services</span>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Nos Services
         </h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fade-in-delay">
-          Développement de logiciels SaaS innovants en Django et solutions d'IA pour les entreprises. 
-          Je crée des applications web performantes et intelligentes.
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une gamme complète de services pour accompagner votre transformation digitale 
+          et créer des solutions innovantes avec l'intelligence artificielle.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid avec design sombre -->
-  <section class="py-24 bg-gray-800 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Services Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Développement SaaS en Django -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Développement SaaS -->
+        <div class="bg-gray-50 rounded-xl p-8">
+          <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-4">Logiciels SaaS en Django</h3>
-          <p class="text-gray-300 mb-6">
-            Création d'applications SaaS innovantes et performantes développées avec Django. 
-            Je conçois des solutions web robustes et évolutives parfaitement adaptées à vos besoins.
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Développement SaaS</h3>
+          <p class="text-gray-600 mb-6">
+            Création d'applications SaaS complètes, de la conception à la mise en production. 
+            Nous développons des solutions scalables et performantes adaptées à vos besoins.
           </p>
           <ul class="space-y-3 mb-6">
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Architecture Django robuste</span>
+              <span class="text-gray-700">Architecture cloud-native</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Interfaces utilisateur modernes</span>
+              <span class="text-gray-700">Interfaces utilisateur modernes</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">API RESTful et GraphQL</span>
+              <span class="text-gray-700">API RESTful et GraphQL</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Sécurité et conformité</span>
+              <span class="text-gray-700">Sécurité et conformité</span>
             </li>
           </ul>
         </div>
 
-        <!-- Solutions d'IA -->
-        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
-          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Intelligence Artificielle -->
+        <div class="bg-gray-50 rounded-xl p-8">
+          <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-4">Solutions d'IA</h3>
-          <p class="text-gray-300 mb-6">
-            Intégration d'intelligence artificielle pour automatiser et optimiser vos processus métier. 
-            Je développe des solutions IA personnalisées qui s'adaptent à votre secteur d'activité.
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Intelligence Artificielle</h3>
+          <p class="text-gray-600 mb-6">
+            Intégration d'IA et de machine learning pour automatiser et optimiser vos processus métier. 
+            Nous créons des solutions intelligentes qui s'adaptent à vos besoins.
           </p>
           <ul class="space-y-3 mb-6">
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Machine Learning personnalisé</span>
+              <span class="text-gray-700">Machine Learning personnalisé</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Traitement du langage naturel</span>
+              <span class="text-gray-700">Traitement du langage naturel</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Vision par ordinateur</span>
+              <span class="text-gray-700">Vision par ordinateur</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
               </svg>
-              <span class="text-gray-300">Automatisation intelligente</span>
+              <span class="text-gray-700">Automatisation intelligente</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Consulting -->
+        <div class="bg-gray-50 rounded-xl p-8">
+          <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Consulting & Formation</h3>
+          <p class="text-gray-600 mb-6">
+            Accompagnement stratégique et formation de vos équipes aux nouvelles technologies. 
+            Nous vous aidons à définir votre roadmap digitale.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Audit technologique</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Formation équipes</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Architecture système</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Accompagnement projet</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Maintenance -->
+        <div class="bg-gray-50 rounded-xl p-8">
+          <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Maintenance & Support</h3>
+          <p class="text-gray-600 mb-6">
+            Maintenance continue et support technique pour garantir la performance 
+            et la sécurité de vos applications.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Monitoring 24/7</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Mises à jour sécurité</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Support technique</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Optimisation performance</span>
             </li>
           </ul>
         </div>
@@ -116,59 +186,27 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <!-- CTA Section avec design sombre -->
-  <section class="py-24 bg-gradient-to-r from-primary-900 to-primary-800 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/50 to-primary-800/50"></div>
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        Prêt à créer votre <span class="text-primary-300">application Django</span> ?
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Prêt à commencer votre projet ?
       </h2>
-      <p class="text-xl text-primary-100 mb-10 max-w-3xl mx-auto">
-        Contactez-moi pour discuter de votre projet et créer ensemble une application SaaS innovante 
-        avec Django et des solutions d'IA.
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé 
+        pour votre projet de développement SaaS avec IA.
       </p>
       <a
         href="/contact"
-        class="bg-white text-primary-600 hover:bg-gray-100 px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20"
+        class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
       >
-        Démarrer le projet
+        Demander un devis
       </a>
     </div>
   </section>
 </MainLayout>
 
-<style>
-  @keyframes gradient {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes gradient-text {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  .animate-gradient {
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 1s ease-out;
-  }
-  
-  .animate-fade-in-delay {
-    animation: fade-in 1s ease-out 0.3s both;
-  }
-  
-  .animate-gradient-text {
-    background-size: 200% 200%;
-    animation: gradient-text 3s ease infinite;
-  }
-</style>
+
+
+
+
