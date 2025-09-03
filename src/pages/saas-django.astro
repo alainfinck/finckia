@@ -1,0 +1,331 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Création SaaS sur mesure en Django - Finckia">
+  <!-- Hero Section avec fond sombre -->
+  <section class="relative bg-gray-900 overflow-hidden py-32">
+    <!-- Particules animées en arrière-plan -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
+      <div class="absolute top-40 right-20 w-1 h-1 bg-primary-300 rounded-full animate-ping"></div>
+      <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
+    </div>
+    
+    <!-- Gradient animé -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 animate-gradient"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+          Création de <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 animate-gradient-text">SaaS sur mesure</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fade-in-delay">
+          Développement d'applications SaaS personnalisées en Django pour transformer vos processus métier 
+          et accélérer votre croissance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages Django -->
+  <section class="py-24 bg-gray-800 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Pourquoi <span class="text-primary-400">Django</span> ?
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Django offre la robustesse et la rapidité nécessaires pour créer des applications SaaS modernes et évolutives.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Performance</h3>
+          <p class="text-gray-300">
+            Applications Django haute performance, optimisées pour une expérience utilisateur exceptionnelle.
+          </p>
+        </div>
+
+        <div class="text-center p-8 bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Sécurité</h3>
+          <p class="text-gray-300">
+            Django intègre nativement des protections de sécurité robustes pour vos applications SaaS.
+          </p>
+        </div>
+
+        <div class="text-center p-8 bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Évolutivité</h3>
+          <p class="text-gray-300">
+            Architecture Django scalable qui s'adapte à la croissance de votre entreprise.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processus de développement -->
+  <section class="py-24 bg-gray-900 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Notre <span class="text-primary-400">processus</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Une approche méthodique pour créer votre SaaS sur mesure en Django.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-white font-bold text-2xl">1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Analyse & Conception</h3>
+          <p class="text-gray-300">
+            Étude approfondie de vos besoins et conception de l'architecture technique.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-white font-bold text-2xl">2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Développement</h3>
+          <p class="text-gray-300">
+            Création de l'application Django avec les fonctionnalités personnalisées.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-white font-bold text-2xl">3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Tests & Optimisation</h3>
+          <p class="text-gray-300">
+            Tests complets et optimisation des performances pour une expérience parfaite.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-white font-bold text-2xl">4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Déploiement</h3>
+          <p class="text-gray-300">
+            Mise en production et accompagnement pour le lancement de votre SaaS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnalités incluses -->
+  <section class="py-24 bg-gray-800 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Fonctionnalités <span class="text-primary-400">incluses</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Toutes les fonctionnalités essentielles pour votre SaaS en Django.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Authentification</h3>
+          <p class="text-gray-300">
+            Système d'authentification sécurisé avec gestion des rôles et permissions.
+          </p>
+        </div>
+
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Tableau de bord</h3>
+          <p class="text-gray-300">
+            Interface d'administration personnalisée avec tableaux de bord interactifs.
+          </p>
+        </div>
+
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">API REST</h3>
+          <p class="text-gray-300">
+            API RESTful complète pour l'intégration avec d'autres systèmes.
+          </p>
+        </div>
+
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Notifications</h3>
+          <p class="text-gray-300">
+            Système de notifications par email et push pour informer vos utilisateurs.
+          </p>
+        </div>
+
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Paiements</h3>
+          <p class="text-gray-300">
+            Intégration de systèmes de paiement sécurisés (Stripe, PayPal, etc.).
+          </p>
+        </div>
+
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8 hover:bg-gray-700/70 transition-all duration-300 transform hover:scale-105">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-4">Automatisations</h3>
+          <p class="text-gray-300">
+            Tâches automatisées et workflows pour optimiser vos processus métier.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies utilisées -->
+  <section class="py-24 bg-gray-900 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Stack <span class="text-primary-400">technique</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Technologies modernes et éprouvées pour votre SaaS en Django.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-lg">Django</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">Django</h3>
+          <p class="text-gray-400 text-sm">Framework web</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-lg">Python</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">Python</h3>
+          <p class="text-gray-400 text-sm">Langage de programmation</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-lg">PostgreSQL</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">PostgreSQL</h3>
+          <p class="text-gray-400 text-sm">Base de données</p>
+        </div>
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-lg">Redis</span>
+          </div>
+          <h3 class="text-lg font-semibold text-white">Redis</h3>
+          <p class="text-gray-400 text-sm">Cache & sessions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-to-r from-primary-900 to-primary-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/50 to-primary-800/50"></div>
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Prêt à créer votre <span class="text-primary-300">SaaS en Django</span> ?
+      </h2>
+      <p class="text-xl text-primary-100 mb-10 max-w-3xl mx-auto">
+        Contactez-moi pour discuter de votre projet et créer ensemble une application SaaS 
+        personnalisée qui transforme vos processus métier.
+      </p>
+      <a
+        href="/contact"
+        class="bg-white text-primary-600 hover:bg-gray-100 px-12 py-6 rounded-xl text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20"
+      >
+        Démarrer le projet
+      </a>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes gradient-text {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fade-in 1s ease-out 0.3s both;
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradient-text 3s ease infinite;
+  }
+</style>

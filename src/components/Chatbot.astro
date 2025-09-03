@@ -1,0 +1,441 @@
+---
+// Composant chatbot IA pour Finckia
+---
+
+<div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+  <!-- Bouton pour ouvrir/fermer le chatbot -->
+  <button 
+    id="chatbot-toggle" 
+    class="w-16 h-16 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white rounded-full shadow-2xl hover:shadow-primary-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+    aria-label="Ouvrir le chatbot"
+  >
+    <svg id="chat-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+    </svg>
+    <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <!-- Fenêtre du chatbot -->
+  <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-[500px] h-[600px] bg-gray-800 rounded-2xl shadow-2xl border border-gray-700/50 backdrop-blur-sm">
+    <!-- Header du chatbot -->
+    <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-t-2xl p-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold">Assistant Finckia</h3>
+          <p class="text-primary-100 text-sm">IA spécialisée</p>
+        </div>
+      </div>
+      <button id="minimize-chatbot" class="text-white hover:text-primary-200 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Zone de messages -->
+    <div id="chat-messages" class="h-96 overflow-y-auto p-4 space-y-4">
+      <!-- Message de bienvenue -->
+      <div class="flex items-start space-x-3">
+        <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <div class="bg-gray-700 rounded-2xl rounded-tl-md px-4 py-3 max-w-sm">
+          <p class="text-white text-sm whitespace-pre-wrap">
+            Bonjour ! Je suis l'assistant IA de Finckia. Je peux vous renseigner sur nos services de développement SaaS, d'intelligence artificielle et de consulting.
+
+Que souhaitez-vous savoir ?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone de saisie -->
+    <div class="p-4 border-t border-gray-700">
+      <div class="flex space-x-3">
+        <input 
+          type="text" 
+          id="chat-input" 
+          placeholder="Posez votre question..."
+          class="flex-1 bg-gray-700 text-white placeholder-gray-400 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+        >
+        <button 
+          id="send-message" 
+          class="bg-primary-600 hover:bg-primary-700 text-white rounded-xl px-4 py-3 transition-colors duration-200 flex items-center justify-center"
+          disabled
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  class Chatbot {
+    constructor() {
+      this.isOpen = false;
+      this.isLoading = false;
+      this.isCollectingContact = false;
+      this.contactData = {};
+      this.init();
+    }
+
+    init() {
+      this.toggleBtn = document.getElementById('chatbot-toggle');
+      this.window = document.getElementById('chatbot-window');
+      this.messages = document.getElementById('chat-messages');
+      this.input = document.getElementById('chat-input');
+      this.sendBtn = document.getElementById('send-message');
+      this.minimizeBtn = document.getElementById('minimize-chatbot');
+      this.chatIcon = document.getElementById('chat-icon');
+      this.closeIcon = document.getElementById('close-icon');
+
+      this.bindEvents();
+      this.setupInputValidation();
+    }
+
+    bindEvents() {
+      this.toggleBtn.addEventListener('click', () => this.toggle());
+      this.minimizeBtn.addEventListener('click', () => this.toggle());
+      this.sendBtn.addEventListener('click', () => this.sendMessage());
+      this.input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !this.isLoading) {
+          this.sendMessage();
+        }
+      });
+    }
+
+    setupInputValidation() {
+      this.input.addEventListener('input', () => {
+        const hasText = this.input.value.trim().length > 0;
+        this.sendBtn.disabled = !hasText || this.isLoading;
+        this.sendBtn.classList.toggle('opacity-50', !hasText || this.isLoading);
+      });
+    }
+
+    toggle() {
+      this.isOpen = !this.isOpen;
+      this.window.classList.toggle('hidden', !this.isOpen);
+      this.chatIcon.classList.toggle('hidden', this.isOpen);
+      this.closeIcon.classList.toggle('hidden', !this.isOpen);
+      
+      if (this.isOpen) {
+        this.input.focus();
+      }
+    }
+
+    async sendMessage() {
+      const message = this.input.value.trim();
+      if (!message || this.isLoading) return;
+
+      // Si on est en train de collecter des coordonnées, ne pas traiter le message
+      if (this.isCollectingContact) {
+        this.addMessage('Veuillez d\'abord remplir le formulaire de contact ci-dessus.', 'bot');
+        return;
+      }
+
+      // Ajouter le message utilisateur
+      this.addMessage(message, 'user');
+      this.input.value = '';
+      this.sendBtn.disabled = true;
+      this.sendBtn.classList.add('opacity-50');
+
+      // Afficher l'indicateur de chargement
+      this.isLoading = true;
+      this.addLoadingMessage();
+
+      try {
+        const response = await this.callMistralAPI(message);
+        this.removeLoadingMessage();
+        
+        // Vérifier si l'IA veut collecter des coordonnées
+        if (response.startsWith('COLLECT_CONTACT:')) {
+          const aiResponse = response.replace('COLLECT_CONTACT:', '').trim();
+          this.addMessage(aiResponse, 'bot');
+          this.startContactCollection();
+        } else {
+          this.addMessage(response, 'bot');
+        }
+      } catch (error) {
+        this.removeLoadingMessage();
+        this.addMessage('Désolé, je rencontre des difficultés techniques. Pouvez-vous réessayer ?', 'bot');
+        console.error('Erreur chatbot:', error);
+      }
+
+      this.isLoading = false;
+      this.sendBtn.disabled = false;
+      this.sendBtn.classList.remove('opacity-50');
+    }
+
+    async callMistralAPI(message) {
+      // Configuration pour l'API Mistral
+      const systemPrompt = `Tu es l'assistant IA de Finckia, une entreprise spécialisée dans le développement de logiciels SaaS sur mesure avec intelligence artificielle. 
+
+Informations sur Finckia :
+- Fondateur : Alain Finckenbein
+- Localisation : Alsace, France
+- Services : Développement SaaS, Intelligence Artificielle, Consulting & Formation
+- Technologies : Django, Python, PostgreSQL, IA/ML, APIs REST
+- Expertise : Solutions sur mesure, automatisation, optimisation de processus
+
+Réponds de manière professionnelle, amicale et informative. Si tu ne sais pas quelque chose, dis-le honnêtement et propose de contacter l'équipe via le formulaire de contact.
+
+IMPORTANT : Si l'utilisateur exprime un intérêt pour nos services, demande un devis, veut être contacté, ou mentionne un projet, propose-lui de laisser ses coordonnées pour qu'un expert puisse le recontacter. Dans ce cas, réponds avec "COLLECT_CONTACT:" suivi de ta réponse normale.
+
+Contexte de la conversation : L'utilisateur pose des questions sur les services de Finckia.`;
+
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: message,
+          systemPrompt: systemPrompt
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Erreur API');
+      }
+
+      const data = await response.json();
+      return data.response;
+    }
+
+    addMessage(text, sender) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'flex items-start space-x-3';
+      
+      // Formater le texte avec des retours à la ligne
+      const formattedText = this.formatMessage(text);
+      
+      if (sender === 'user') {
+        messageDiv.innerHTML = `
+          <div class="flex-1"></div>
+          <div class="bg-primary-600 rounded-2xl rounded-tr-md px-4 py-3 max-w-sm">
+            <p class="text-white text-sm whitespace-pre-wrap">${formattedText}</p>
+          </div>
+        `;
+      } else {
+        messageDiv.innerHTML = `
+          <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <div class="bg-gray-700 rounded-2xl rounded-tl-md px-4 py-3 max-w-sm">
+            <p class="text-white text-sm whitespace-pre-wrap">${formattedText}</p>
+          </div>
+        `;
+      }
+
+      this.messages.appendChild(messageDiv);
+      this.scrollToBottom();
+    }
+
+    formatMessage(text) {
+      // Échapper le HTML
+      let formatted = this.escapeHtml(text);
+      
+      // Convertir les retours à la ligne en <br> ou garder les \n pour whitespace-pre-wrap
+      // Les retours à la ligne sont déjà gérés par whitespace-pre-wrap
+      
+      // Ajouter des espaces autour des listes
+      formatted = formatted.replace(/(\n)(\d+\.|\*|\-)/g, '$1$2');
+      
+      // Améliorer l'affichage des listes
+      formatted = formatted.replace(/(\n)(\d+\.|\*|\-)(\s*)/g, '$1$2$3');
+      
+      return formatted;
+    }
+
+    addLoadingMessage() {
+      const loadingDiv = document.createElement('div');
+      loadingDiv.id = 'loading-message';
+      loadingDiv.className = 'flex items-start space-x-3';
+      loadingDiv.innerHTML = `
+        <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <div class="bg-gray-700 rounded-2xl rounded-tl-md px-4 py-3">
+          <div class="flex space-x-1">
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+          </div>
+        </div>
+      `;
+      this.messages.appendChild(loadingDiv);
+      this.scrollToBottom();
+    }
+
+    removeLoadingMessage() {
+      const loadingMessage = document.getElementById('loading-message');
+      if (loadingMessage) {
+        loadingMessage.remove();
+      }
+    }
+
+    scrollToBottom() {
+      this.messages.scrollTop = this.messages.scrollHeight;
+    }
+
+    escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    startContactCollection() {
+      this.isCollectingContact = true;
+      this.contactData = {};
+      
+      // Afficher le formulaire de contact
+      this.showContactForm();
+    }
+
+    showContactForm() {
+      const formHtml = `
+        <div class="flex items-start space-x-3">
+          <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <div class="bg-gray-700 rounded-2xl rounded-tl-md px-4 py-3 max-w-sm">
+            <p class="text-white text-sm mb-3">Parfait ! Pour qu'un expert puisse vous recontacter, pouvez-vous me donner vos coordonnées ?</p>
+            <div class="space-y-3">
+              <input type="text" id="contact-name" placeholder="Votre nom *" class="w-full bg-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <input type="email" id="contact-email" placeholder="Votre email *" class="w-full bg-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <input type="tel" id="contact-phone" placeholder="Votre téléphone" class="w-full bg-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <input type="text" id="contact-company" placeholder="Votre entreprise" class="w-full bg-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <textarea id="contact-message" placeholder="Votre message ou projet" rows="3" class="w-full bg-gray-600 text-white placeholder-gray-400 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"></textarea>
+              <button id="submit-contact" class="w-full bg-primary-600 hover:bg-primary-700 text-white rounded-lg px-3 py-2 text-sm transition-colors font-medium">
+                Envoyer mes coordonnées
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      const formDiv = document.createElement('div');
+      formDiv.innerHTML = formHtml;
+      this.messages.appendChild(formDiv);
+      this.scrollToBottom();
+      
+      // Ajouter les événements
+      document.getElementById('submit-contact').addEventListener('click', () => this.submitContact());
+    }
+
+    async submitContact() {
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const company = document.getElementById('contact-company').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      
+      // Validation basique
+      if (!name || !email) {
+        this.addMessage('Veuillez remplir au minimum votre nom et email.', 'bot');
+        return;
+      }
+      
+      // Validation email basique
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        this.addMessage('Veuillez entrer une adresse email valide.', 'bot');
+        return;
+      }
+      
+      // Préparer les données
+      const contactData = {
+        name,
+        email,
+        phone: phone || null,
+        company: company || null,
+        message: message || null
+      };
+      
+      try {
+        // Sauvegarder les coordonnées
+        const response = await fetch('/api/save-contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(contactData)
+        });
+        
+        if (response.ok) {
+          this.addMessage('Merci ! Vos coordonnées ont été enregistrées. Un expert de notre équipe vous recontactera dans les plus brefs délais.', 'bot');
+        } else {
+          this.addMessage('Désolé, il y a eu un problème lors de l\'enregistrement. Vous pouvez aussi nous contacter directement via le formulaire de contact.', 'bot');
+        }
+      } catch (error) {
+        console.error('Erreur sauvegarde contact:', error);
+        this.addMessage('Désolé, il y a eu un problème lors de l\'enregistrement. Vous pouvez aussi nous contacter directement via le formulaire de contact.', 'bot');
+      }
+      
+      // Réinitialiser l'état
+      this.isCollectingContact = false;
+      this.contactData = {};
+      
+      // Masquer le formulaire
+      const contactForm = this.messages.querySelector('.bg-gray-700:has(#contact-name)');
+      if (contactForm) {
+        contactForm.closest('.flex').remove();
+      }
+    }
+  }
+
+  // Initialiser le chatbot quand le DOM est chargé
+  document.addEventListener('DOMContentLoaded', () => {
+    new Chatbot();
+  });
+</script>
+
+<style>
+  #chat-messages::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #chat-messages::-webkit-scrollbar-thumb {
+    background: #4B5563;
+    border-radius: 3px;
+  }
+
+  #chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+  }
+
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 1.4s ease-in-out infinite both;
+  }
+</style>

@@ -1,0 +1,275 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="À propos - Finckia - Développement SaaS sur mesure avec IA"
+  description="Découvrez l'équipe passionnée de Finckia, spécialisée dans le développement SaaS et l'IA. Notre mission : démocratiser l'accès aux technologies innovantes."
+  image="/img/team/alain-finckenbein.png"
+  ogType="profile"
+  twitterCard="summary_large_image"
+>
+  <!-- Hero Section avec fond sombre -->
+  <section class="relative bg-gray-900 overflow-hidden py-32">
+    <!-- Particules animées en arrière-plan -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
+      <div class="absolute top-40 right-20 w-1 h-1 bg-primary-300 rounded-full animate-ping"></div>
+      <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
+    </div>
+    
+    <!-- Gradient animé -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900 animate-gradient"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+          À propos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 animate-gradient-text">Finckia</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fade-in-delay">
+          Nous sommes une équipe passionnée de développeurs et d'experts en IA, 
+          dédiés à la création de solutions SaaS innovantes qui transforment les entreprises.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section avec design sombre -->
+  <section class="py-24 bg-gray-800 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Notre <span class="text-primary-400">Mission</span>
+          </h2>
+          <p class="text-lg text-gray-300 mb-6">
+            Chez Finckia, nous croyons que l'intelligence artificielle peut révolutionner 
+            la façon dont les entreprises opèrent. Notre mission est de démocratiser 
+            l'accès à ces technologies en créant des solutions SaaS sur mesure, 
+            accessibles et performantes.
+          </p>
+          <p class="text-lg text-gray-300 mb-6">
+            Nous accompagnons nos clients dans leur transformation digitale en combinant 
+            expertise technique, innovation et vision stratégique pour créer des 
+            applications qui génèrent une vraie valeur ajoutée.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <div class="flex items-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">Innovation</h3>
+                <p class="text-gray-300">Technologies de pointe</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">Performance</h3>
+                <p class="text-gray-300">Solutions optimisées</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Photo d'Alain avec effet -->
+        <div class="flex justify-center">
+          <div class="relative">
+            <div class="w-64 h-64 relative">
+              <!-- Effet de glow animé discret -->
+              <div class="absolute inset-0 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 rounded-3xl blur-lg opacity-20 animate-pulse"></div>
+              <div class="absolute inset-2 bg-gradient-to-r from-primary-300 via-primary-400 to-primary-500 rounded-3xl blur-md opacity-15"></div>
+              <!-- Photo avec effet de bordure subtile -->
+              <div class="relative z-10 w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-2">
+                <img src="/img/team/alain-finckenbein.png" alt="Alain Finckenbein - Fondateur de Finckia" class="w-full h-full object-contain rounded-2xl bg-transparent" />
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <h3 class="text-xl font-bold text-white mb-2">Alain Finckenbein</h3>
+              <p class="text-primary-400 font-semibold">Fondateur & CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
+          <h3 class="text-2xl font-bold text-white mb-6">Nos Valeurs</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-4 mt-1 shadow-lg">
+                <span class="text-white font-bold text-sm">1</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-2">Excellence technique</h4>
+                <p class="text-gray-300">Nous maintenons les plus hauts standards de qualité dans tous nos développements.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-4 mt-1 shadow-lg">
+                <span class="text-white font-bold text-sm">2</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-2">Innovation continue</h4>
+                <p class="text-gray-300">Nous explorons constamment les nouvelles technologies pour améliorer nos solutions.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-4 mt-1 shadow-lg">
+                <span class="text-white font-bold text-sm">3</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-2">Collaboration</h4>
+                <p class="text-gray-300">Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-4 mt-1 shadow-lg">
+                <span class="text-white font-bold text-sm">4</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-2">Impact positif</h4>
+                <p class="text-gray-300">Nous créons des solutions qui ont un impact positif sur les entreprises et leurs utilisateurs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section avec design sombre -->
+  <section class="py-24 bg-gray-900 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Notre <span class="text-primary-400">Équipe</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Une équipe d'experts passionnés par la technologie et l'innovation, 
+          dédiés à créer des solutions exceptionnelles pour nos clients.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Alain Finckenbein - Fondateur -->
+        <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 text-center hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+          <div class="w-32 h-32 mx-auto mb-6">
+            <img src="/img/team/alain-finckenbein.png" alt="Alain Finckenbein" class="w-full h-full object-contain rounded-2xl shadow-lg border-2 border-primary-500/30 bg-transparent" />
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Alain Finckenbein</h3>
+          <p class="text-primary-400 font-semibold mb-2">Fondateur & CEO</p>
+          <p class="text-gray-300 mb-4">
+            Expert en développement SaaS et solutions cloud. Passionné par l'innovation technologique et l'IA.
+          </p>
+          <div class="flex justify-center space-x-2">
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">SaaS</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">Cloud</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">IA</span>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 text-center hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+          <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Développeurs Full-Stack</h3>
+          <p class="text-gray-300 mb-4">
+            Experts en développement frontend et backend avec une maîtrise des technologies modernes.
+          </p>
+          <div class="flex justify-center space-x-2">
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">React</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">Node.js</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">Python</span>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 text-center hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+          <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Experts IA/ML</h3>
+          <p class="text-gray-300 mb-4">
+            Spécialistes en intelligence artificielle et machine learning pour créer des solutions intelligentes.
+          </p>
+          <div class="flex justify-center space-x-2">
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">TensorFlow</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">PyTorch</span>
+            <span class="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-sm border border-primary-500/30">OpenAI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section avec design sombre -->
+  <section class="py-24 bg-gradient-to-r from-primary-900 to-primary-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/50 to-primary-800/50"></div>
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white mb-2">12+</div>
+          <div class="text-primary-100">Projets réalisés</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white mb-2">8+</div>
+          <div class="text-primary-100">Clients satisfaits</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
+          <div class="text-primary-100">Années d'expérience</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white mb-2">100%</div>
+          <div class="text-primary-100">Satisfaction client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes gradient-text {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fade-in 1s ease-out 0.3s both;
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradient-text 3s ease infinite;
+  }
+</style>
