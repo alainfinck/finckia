@@ -79,7 +79,6 @@ finckia/
 - **Développement SaaS** - Applications cloud-native personnalisées
 - **Intelligence Artificielle** - Intégration d'IA et machine learning
 - **Consulting & Formation** - Accompagnement stratégique
-- **Maintenance & Support** - Services post-lancement
 
 ## 🌐 Déploiement
 
@@ -92,8 +91,3 @@ Le site est conçu pour être déployé sur n'importe quel hébergeur statique :
 ## 📄 Licence
 
 © 2024 Finckia. Tous droits réservés.
-
-
-
-
-

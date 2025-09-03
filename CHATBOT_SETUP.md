@@ -36,4 +36,3 @@ MISTRAL_API_KEY=votre_cle_api_mistral_ici
 - Gestion d'erreur robuste
 
 
-
